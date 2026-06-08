@@ -1,0 +1,3 @@
+{
+  "extends": "@shadcn-RTE/config/tsconfig.base.json"
+}
