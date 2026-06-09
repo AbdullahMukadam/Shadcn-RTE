@@ -1,28 +1,29 @@
 {
-    "name": "@shadcn-rte/editor",
-    "version": "0.0.1",
-    "main": "./src/index.ts",
-    "types": "./src/index.ts",
-    "scripts": {
-      "dev": "tsc --watch",
-      "build": "tsc"
-    },
-    "peerDependencies": {
-      "react": "^18 || ^19",
-      "react-dom": "^18 || ^19"
-    },
-    "dependencies": {
-      "@tiptap/react": "^2.11.5",
-      "@tiptap/pm": "^2.11.5",
-      "@tiptap/starter-kit": "^2.11.5",
-      "@tiptap/extension-underline": "^2.11.5",
-      "@tiptap/extension-link": "^2.11.5",
-      "@tiptap/extension-placeholder": "^2.11.5",
-      "@tiptap/extension-code-block-lowlight": "^2.11.5",
-      "lowlight": "^3.3.0"
-    },
-    "devDependencies": {
-      "typescript": "^5",
-      "@types/react": "^19"
-    }
+  "name": "@shadcn-rte/editor",
+  "version": "0.0.1",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
+  },
+  "dependencies": {
+    "@tiptap/extension-code-block-lowlight": "^2.11.5",
+    "@tiptap/extension-link": "^2.11.5",
+    "@tiptap/extension-placeholder": "^2.11.5",
+    "@tiptap/extension-underline": "^2.11.5",
+    "@tiptap/pm": "^2.11.5",
+    "@tiptap/react": "^2.11.5",
+    "@tiptap/starter-kit": "^2.11.5",
+    "lowlight": "^3.3.0",
+    "lucide-react": "catalog:"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "typescript": "^5"
   }
+}
