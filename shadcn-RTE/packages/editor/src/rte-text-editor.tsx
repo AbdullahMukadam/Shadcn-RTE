@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { cn } from "../../ui/src/lib/utils";
+import { cn } from "@/lib/utils";
 import { RichTextEditorContext } from './rte-context';
 import { DEFAULT_LABELS } from './labels';
 import { Toolbar } from './rte-toolbar';

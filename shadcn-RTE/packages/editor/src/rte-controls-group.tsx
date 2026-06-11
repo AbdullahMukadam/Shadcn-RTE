@@ -1,4 +1,4 @@
-import { cn } from "../../ui/src/lib/utils";
+import { cn } from "@/lib/utils";
 import type { RichTextEditorControlsGroupProps } from './types';
 
 export function ControlsGroup({

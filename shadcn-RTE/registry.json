@@ -1,0 +1,87 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "shadcn-rte",
+  "homepage": "https://github.com/AbdullahMukadam/shadcn-RTE",
+  "items": [
+    {
+      "name": "rich-text-editor",
+      "type": "registry:block",
+      "title": "Rich Text Editor",
+      "description": "A Tiptap-based rich text editor component for shadcn/ui projects.",
+      "registryDependencies": [
+        "toggle",
+        "popover",
+        "input",
+        "button"
+      ],
+      "dependencies": [
+        "@tiptap/react@^2.11.5",
+        "@tiptap/starter-kit@^2.11.5",
+        "@tiptap/pm@^2.11.5",
+        "@tiptap/extension-link@^2.11.5",
+        "@tiptap/extension-underline@^2.11.5",
+        "@tiptap/extension-code-block-lowlight@^2.11.5",
+        "@tiptap/extension-placeholder@^2.11.5",
+        "lowlight@^3.3.0",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "packages/editor/src/index.ts",
+          "type": "registry:component",
+          "target": "@ui/rich-text-editor/index.ts"
+        },
+        {
+          "path": "packages/editor/src/types.ts",
+          "type": "registry:lib",
+          "target": "@ui/rich-text-editor/types.ts"
+        },
+        {
+          "path": "packages/editor/src/labels.ts",
+          "type": "registry:lib",
+          "target": "@ui/rich-text-editor/labels.ts"
+        },
+        {
+          "path": "packages/editor/src/rte-context.ts",
+          "type": "registry:lib",
+          "target": "@ui/rich-text-editor/rte-context.ts"
+        },
+        {
+          "path": "packages/editor/src/rte-text-editor.tsx",
+          "type": "registry:component",
+          "target": "@ui/rich-text-editor/rte-text-editor.tsx"
+        },
+        {
+          "path": "packages/editor/src/rte-toolbar.tsx",
+          "type": "registry:component",
+          "target": "@ui/rich-text-editor/rte-toolbar.tsx"
+        },
+        {
+          "path": "packages/editor/src/rte-content.tsx",
+          "type": "registry:component",
+          "target": "@ui/rich-text-editor/rte-content.tsx"
+        },
+        {
+          "path": "packages/editor/src/rte-controls-group.tsx",
+          "type": "registry:component",
+          "target": "@ui/rich-text-editor/rte-controls-group.tsx"
+        },
+        {
+          "path": "packages/editor/src/controls/rte-control.tsx",
+          "type": "registry:component",
+          "target": "@ui/rich-text-editor/controls/rte-control.tsx"
+        },
+        {
+          "path": "packages/editor/src/controls/rte-controls.tsx",
+          "type": "registry:component",
+          "target": "@ui/rich-text-editor/controls/rte-controls.tsx"
+        },
+        {
+          "path": "packages/editor/src/controls/rte-link-control.tsx",
+          "type": "registry:component",
+          "target": "@ui/rich-text-editor/controls/rte-link-control.tsx"
+        }
+      ]
+    }
+  ]
+}

@@ -6,10 +6,10 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "../../../ui/src/components/popover";
-import { Input } from "../../../ui/src/components/input";
-import { Button } from "../../../ui/src/components/button";
-import { Toggle } from "../../../ui/src/components/toggle";
+} from "@/components/ui/popover";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Toggle } from "@/components/ui/toggle";
 import { useRichTextEditorContext } from "../rte-context";
 
 export function LinkControl() {

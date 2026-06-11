@@ -3,8 +3,8 @@ import type { RichTextEditorLabels } from "../labels";
 import { useRichTextEditorContext } from "../rte-context";
 import type { RichTextEditorControlProps } from "../types";
 import React from "react";
-import { Toggle } from "../../../ui/src/components/toggle";
-import { cn } from "../../../ui/src/lib/utils";
+import { Toggle } from "@/components/ui/toggle";
+import { cn } from "@/lib/utils";
 
 interface CreateControlProps {
   label: keyof RichTextEditorLabels;

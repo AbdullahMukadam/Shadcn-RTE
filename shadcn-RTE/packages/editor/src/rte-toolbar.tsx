@@ -1,4 +1,4 @@
-import { cn } from "../../ui/src/lib/utils";
+import { cn } from "@/lib/utils";
 import type { RichTextEditorToolbarProps } from './types';
 
 export function Toolbar({

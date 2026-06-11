@@ -20,6 +20,8 @@
       }
     ],
     "paths": {
+      "@/components/ui/*": ["../../packages/ui/src/components/*"],
+      "@/lib/*": ["../../packages/ui/src/lib/*"],
       "@/*": ["./src/*"],
       "@shadcn-RTE/ui/*": ["../../packages/ui/src/*"]
     }

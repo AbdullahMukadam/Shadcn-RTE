@@ -14,7 +14,6 @@ import {
   ListOrdered,
   TextQuote,
   Minus,
-  Link,
   Unlink,
   Undo,
   Redo,
