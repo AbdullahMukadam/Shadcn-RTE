@@ -1,5 +1,5 @@
 import { EditorContent } from "@tiptap/react";
-import { cn } from "@/lib/utils";
+import { cn } from "./ui/utils";
 import { useRichTextEditorContext } from "./rte-context";
 import type { RichTextEditorContentProps } from "./types";
 

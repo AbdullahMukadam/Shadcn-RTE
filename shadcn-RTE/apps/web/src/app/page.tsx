@@ -2,7 +2,7 @@
 import "../index.css"
 import {
   RichTextEditor,
-} from "../../../../packages/editor/src";
+} from "@shadcn-rte/editor";
 import { useEditor } from '@tiptap/react';
 import Highlight from '@tiptap/extension-highlight';
 import StarterKit from '@tiptap/starter-kit';
