@@ -10,6 +10,8 @@ export interface RichTextEditorLabels {
     h2ControlLabel: string;
     h3ControlLabel: string;
     h4ControlLabel: string;
+    h5ControlLabel: string;
+    h6ControlLabel: string;
     bulletListControlLabel: string;
     orderedListControlLabel: string;
     blockquoteControlLabel: string;
@@ -18,6 +20,17 @@ export interface RichTextEditorLabels {
     unlinkControlLabel: string;
     undoControlLabel: string;
     redoControlLabel: string;
+    alignLeftControlLabel: string;
+    alignCenterControlLabel: string;
+    alignRightControlLabel: string;
+    alignJustifyControlLabel: string;
+    highlightControlLabel: string;
+    subscriptControlLabel: string;
+    superscriptControlLabel: string;
+    tasksControlLabel: string;
+    tasksSinkLabel: string;
+    tasksLiftLabel: string;
+    sourceCodeControlLabel: string;
     // link editor
     linkEditorInputLabel: string;
     linkEditorInputPlaceholder: string;
@@ -38,6 +51,8 @@ export interface RichTextEditorLabels {
     h2ControlLabel: 'Heading 2',
     h3ControlLabel: 'Heading 3',
     h4ControlLabel: 'Heading 4',
+    h5ControlLabel: 'Heading 5',
+    h6ControlLabel: 'Heading 6',
     bulletListControlLabel: 'Bullet list',
     orderedListControlLabel: 'Ordered list',
     blockquoteControlLabel: 'Blockquote',
@@ -46,6 +61,17 @@ export interface RichTextEditorLabels {
     unlinkControlLabel: 'Remove link',
     undoControlLabel: 'Undo',
     redoControlLabel: 'Redo',
+    alignLeftControlLabel: 'Align left',
+    alignCenterControlLabel: 'Align center',
+    alignRightControlLabel: 'Align right',
+    alignJustifyControlLabel: 'Align justify',
+    highlightControlLabel: 'Highlight',
+    subscriptControlLabel: 'Subscript',
+    superscriptControlLabel: 'Superscript',
+    tasksControlLabel: 'Task list',
+    tasksSinkLabel: 'Decrease task level',
+    tasksLiftLabel: 'Increase task level',
+    sourceCodeControlLabel: 'Source code',
     linkEditorInputLabel: 'Enter URL',
     linkEditorInputPlaceholder: 'https://example.com',
     linkEditorExternalLink: 'Open in new tab',

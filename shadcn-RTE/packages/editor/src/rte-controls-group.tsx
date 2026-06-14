@@ -8,8 +8,7 @@ export function ControlsGroup({
   return (
     <div
       className={cn(
-        'flex items-center gap-0.5',
-        'border-r border-input pr-1 mr-1 last:border-r-0 last:pr-0 last:mr-0',
+        'rte-controls-group',
         className
       )}
     >

@@ -1,0 +1,13 @@
+{
+  "title": "Docs",
+  "root": true,
+  "pages": [
+    "index",
+    "getting-started",
+    "---Components---",
+    "rich-text-editor",
+    "toolbar",
+    "---Extensions---",
+    "link"
+  ]
+}

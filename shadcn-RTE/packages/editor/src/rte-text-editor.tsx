@@ -25,7 +25,7 @@ function RichTextEditorRoot({
     <RichTextEditorContext.Provider value={{ editor, labels: mergedLabels }}>
       <div
         className={cn(
-          'rounded-md border border-input bg-background text-sm shadow-sm',
+          'rte-root',
           className
         )}
       >
@@ -52,6 +52,8 @@ export const RichTextEditor = Object.assign(RichTextEditorRoot, {
   H2: controls.H2Control,
   H3: controls.H3Control,
   H4: controls.H4Control,
+  H5: controls.H5Control,
+  H6: controls.H6Control,
   BulletList: controls.BulletListControl,
   OrderedList: controls.OrderedListControl,
   Blockquote: controls.BlockquoteControl,
@@ -59,4 +61,11 @@ export const RichTextEditor = Object.assign(RichTextEditorRoot, {
   Unlink: controls.UnlinkControl,
   Undo: controls.UndoControl,
   Redo: controls.RedoControl,
+  AlignLeft: controls.AlignLeftControl,
+  AlignCenter: controls.AlignCenterControl,
+  AlignRight: controls.AlignRightControl,
+  AlignJustify: controls.AlignJustifyControl,
+  Highlight: controls.HighlightControl,
+  Subscript: controls.SubscriptControl,
+  Superscript: controls.SuperscriptControl,
 });

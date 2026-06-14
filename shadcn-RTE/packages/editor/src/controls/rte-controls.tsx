@@ -10,6 +10,8 @@ import {
   Heading2,
   Heading3,
   Heading4,
+  Heading5,
+  Heading6,
   List,
   ListOrdered,
   TextQuote,
@@ -17,6 +19,13 @@ import {
   Unlink,
   Undo,
   Redo,
+  AlignLeft,
+  AlignCenter,
+  AlignRight,
+  AlignJustify,
+  Highlighter,
+  Subscript,
+  Superscript,
 } from 'lucide-react';
 import { createControl } from './rte-control';
 
@@ -143,4 +152,63 @@ export const RedoControl = createControl({
   icon: <Redo {...iconProps} />,
   isDisabled: (editor) => !editor.can().redo(),
   operation: { name: 'redo' },
+});
+
+export const H5Control = createControl({
+  label: 'h5ControlLabel',
+  icon: <Heading5 {...iconProps} />,
+  isActive: { name: 'heading', attributes: { level: 5 } },
+  operation: { name: 'toggleHeading', attributes: { level: 5 } },
+});
+
+export const H6Control = createControl({
+  label: 'h6ControlLabel',
+  icon: <Heading6 {...iconProps} />,
+  isActive: { name: 'heading', attributes: { level: 6 } },
+  operation: { name: 'toggleHeading', attributes: { level: 6 } },
+});
+
+export const AlignLeftControl = createControl({
+  label: 'alignLeftControlLabel',
+  icon: <AlignLeft {...iconProps} />,
+  operation: { name: 'setTextAlign', attributes: 'left' },
+});
+
+export const AlignCenterControl = createControl({
+  label: 'alignCenterControlLabel',
+  icon: <AlignCenter {...iconProps} />,
+  operation: { name: 'setTextAlign', attributes: 'center' },
+});
+
+export const AlignRightControl = createControl({
+  label: 'alignRightControlLabel',
+  icon: <AlignRight {...iconProps} />,
+  operation: { name: 'setTextAlign', attributes: 'right' },
+});
+
+export const AlignJustifyControl = createControl({
+  label: 'alignJustifyControlLabel',
+  icon: <AlignJustify {...iconProps} />,
+  operation: { name: 'setTextAlign', attributes: 'justify' },
+});
+
+export const HighlightControl = createControl({
+  label: 'highlightControlLabel',
+  icon: <Highlighter {...iconProps} />,
+  isActive: { name: 'highlight' },
+  operation: { name: 'toggleHighlight' },
+});
+
+export const SubscriptControl = createControl({
+  label: 'subscriptControlLabel',
+  icon: <Subscript {...iconProps} />,
+  isActive: { name: 'subscript' },
+  operation: { name: 'toggleSubscript' },
+});
+
+export const SuperscriptControl = createControl({
+  label: 'superscriptControlLabel',
+  icon: <Superscript {...iconProps} />,
+  isActive: { name: 'superscript' },
+  operation: { name: 'toggleSuperscript' },
 });

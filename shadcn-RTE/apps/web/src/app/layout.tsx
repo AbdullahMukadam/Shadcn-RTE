@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { RootProvider } from "fumadocs-ui/provider/next";
 
 import "../index.css";
 import Header from "@/components/header";
@@ -27,13 +28,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Providers>
-          <div className="grid grid-rows-[auto_1fr] h-svh">
-            <Header />
-            {children}
-          </div>
-        </Providers>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+        <RootProvider theme={{ enabled: false }}>
+          <Providers>
+            <div className="grid grid-rows-[auto_1fr] h-svh">
+              <Header />
+              {children}
+            </div>
+          </Providers>
+        </RootProvider>
       </body>
     </html>
   );

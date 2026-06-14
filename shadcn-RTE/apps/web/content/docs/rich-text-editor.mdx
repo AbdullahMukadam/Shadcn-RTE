@@ -1,0 +1,59 @@
+---
+title: RichTextEditor
+description: The root component and its compound children.
+---
+
+# RichTextEditor
+
+The `RichTextEditor` component is a compound component. The root component sets up context, and its child components render the UI.
+
+## RichTextEditor (Root)
+
+The root wrapper that provides the editor context to all children.
+
+### Props
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `editor` | `Editor \| null` | The Tiptap editor instance |
+| `children` | `ReactNode` | Toolbar, content, controls |
+| `className` | `string` | Additional classes |
+| `labels` | `Partial<RichTextEditorLabels>` | Override default labels |
+
+### Example
+
+```tsx
+<RichTextEditor editor={editor}>
+  <RichTextEditor.Toolbar>...</RichTextEditor.Toolbar>
+  <RichTextEditor.Content />
+</RichTextEditor>
+```
+
+## RichTextEditor.Toolbar
+
+The toolbar that holds control groups. Supports sticky positioning.
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `sticky` | `boolean` | `false` | Sticks toolbar to top on scroll |
+| `stickyOffset` | `number` | `0` | Offset from top when sticky |
+
+## RichTextEditor.ControlsGroup
+
+Groups related controls together. Automatically adds a visual separator between groups.
+
+## RichTextEditor.Content
+
+Renders the Tiptap editor content area.
+
+## RichTextEditor.Control
+
+A generic control button. Use the built-in controls instead when possible.
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `isActive` | `boolean` | Whether the control is in active state |
+| `operation` | `() => void` | The command to execute on click |
+| `label` | `string` | Accessible label |
+| `icon` | `ReactNode` | Icon element |
+| `isDisabled` | `boolean` | Disables the control |

@@ -38,9 +38,14 @@ export function LinkControl() {
   const handleSave = () => {
     if (!editor || editor.isDestroyed) return;
     if (url === "") {
-      editor.chain().focus().extendMarkRange("link", { href: "" });
+      editor.chain().focus().extendMarkRange("link").unsetLink().run();
     } else {
-      editor.chain().focus().extendMarkRange("link", { href: url }).run();
+      editor
+        .chain()
+        .focus()
+        .extendMarkRange("link")
+        .setLink({ href: url })
+        .run();
     }
     setOpen(false);
     setUrl("");
@@ -53,22 +58,29 @@ export function LinkControl() {
     }
   };
 
+  React.useEffect(() => {
+    const handler = () => handleOpen(true);
+    window.addEventListener("edit-link", handler);
+    return () => window.removeEventListener("edit-link", handler);
+  }, [editor]);
+
   return (
     <Popover open={open} onOpenChange={handleOpen}>
-      <PopoverTrigger>
+      <PopoverTrigger
+        onMouseDown={(e: React.MouseEvent) => e.preventDefault()}
+      >
         <Toggle
           size="sm"
           pressed={active ?? false}
           aria-label={labels.linkControlLabel}
           title={labels.linkControlLabel}
           className="h-8 w-8 p-0"
-          onMouseDown={(e) => e.preventDefault()}
         >
           <Link className="h-4 w-4" />
         </Toggle>
       </PopoverTrigger>
       <PopoverContent className="w-72 p-3">
-        <div className="flex gap-2">
+        <div className="rte-link-editor">
           <Input
             type="url"
             placeholder={labels.linkEditorInputPlaceholder}
@@ -76,13 +88,13 @@ export function LinkControl() {
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="h-8 text-sm"
+            className="rte-link-editor-input h-8 text-sm"
           />
           <Button
             size="sm"
             variant="default"
             onClick={handleSave}
-            className="h-8"
+            className="rte-link-editor-save h-8"
           >
             {labels.linkEditorSave}
           </Button>

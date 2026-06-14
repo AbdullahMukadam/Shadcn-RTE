@@ -2,11 +2,13 @@
 import "../index.css"
 import {
   RichTextEditor,
+  Link,
 } from "@shadcn-rte/editor";
 import { useEditor } from '@tiptap/react';
 import Highlight from '@tiptap/extension-highlight';
 import StarterKit from '@tiptap/starter-kit';
 import TextAlign from '@tiptap/extension-text-align';
+import Underline from '@tiptap/extension-underline';
 import Superscript from '@tiptap/extension-superscript';
 import SubScript from '@tiptap/extension-subscript';
 
@@ -34,6 +36,8 @@ export default function Home() {
     shouldRerenderOnTransaction: true,
     extensions: [
       StarterKit,
+      Link,
+      Underline,
       Superscript,
       SubScript,
       Highlight,
@@ -69,6 +73,8 @@ export default function Home() {
               <RichTextEditor.H2 />
               <RichTextEditor.H3 />
               <RichTextEditor.H4 />
+              <RichTextEditor.H5 />
+              <RichTextEditor.H6 />
             </RichTextEditor.ControlsGroup>
 
             <RichTextEditor.ControlsGroup>
@@ -76,6 +82,19 @@ export default function Home() {
               <RichTextEditor.Hr />
               <RichTextEditor.BulletList />
               <RichTextEditor.OrderedList />
+            </RichTextEditor.ControlsGroup>
+
+            <RichTextEditor.ControlsGroup>
+              <RichTextEditor.Highlight />
+              <RichTextEditor.Subscript />
+              <RichTextEditor.Superscript />
+            </RichTextEditor.ControlsGroup>
+
+            <RichTextEditor.ControlsGroup>
+              <RichTextEditor.AlignLeft />
+              <RichTextEditor.AlignCenter />
+              <RichTextEditor.AlignRight />
+              <RichTextEditor.AlignJustify />
             </RichTextEditor.ControlsGroup>
 
             <RichTextEditor.ControlsGroup>

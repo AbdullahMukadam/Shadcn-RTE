@@ -21,6 +21,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
+      "collections/*": ["./.source/*"],
       "@shadcn-RTE/ui/*": ["../../packages/ui/src/*"],
       "@shadcn-rte/editor": ["../../packages/editor/src"],
       "@shadcn-rte/editor/*": ["../../packages/editor/src/*"]

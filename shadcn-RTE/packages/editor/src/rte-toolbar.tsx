@@ -10,10 +10,11 @@ export function Toolbar({
   return (
     <div
       className={cn(
-        'flex flex-wrap gap-1 border-b border-input bg-background p-1',
+        'rte-toolbar',
         sticky && 'sticky z-10',
         className
       )}
+      data-sticky={sticky ? '' : undefined}
       style={sticky ? { top: stickyOffset } : undefined}
     >
       {children}

@@ -1,0 +1,68 @@
+---
+title: Introduction
+description: A rich text editor component for the shadcn/ui ecosystem.
+---
+
+# shadcn-RTE
+
+A rich text editor built on [Tiptap](https://tiptap.dev/) for the [shadcn/ui](https://ui.shadcn.com/) ecosystem.
+
+## Features
+
+- Built with shadcn/ui design tokens and CSS variables
+- Compound component API similar to Mantine's RichTextEditor
+- Full TypeScript support
+- Extensible via Tiptap extensions
+- Lightweight — only the controls you need
+
+## Installation
+
+```bash
+npm install @shadcn-rte/editor
+```
+
+Then import the CSS:
+
+```css
+@import "@shadcn-rte/editor/style.css";
+```
+
+## Quick Start
+
+```tsx
+import { useEditor } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import { RichTextEditor, Link } from '@shadcn-rte/editor';
+
+export default function MyEditor() {
+  const editor = useEditor({
+    extensions: [StarterKit, Link],
+    content: '<p>Hello World!</p>',
+  });
+
+  return (
+    <RichTextEditor editor={editor}>
+      <RichTextEditor.Toolbar>
+        <RichTextEditor.ControlsGroup>
+          <RichTextEditor.Bold />
+          <RichTextEditor.Italic />
+          <RichTextEditor.Underline />
+        </RichTextEditor.ControlsGroup>
+
+        <RichTextEditor.ControlsGroup>
+          <RichTextEditor.H1 />
+          <RichTextEditor.H2 />
+          <RichTextEditor.H3 />
+        </RichTextEditor.ControlsGroup>
+
+        <RichTextEditor.ControlsGroup>
+          <RichTextEditor.Undo />
+          <RichTextEditor.Redo />
+        </RichTextEditor.ControlsGroup>
+      </RichTextEditor.Toolbar>
+
+      <RichTextEditor.Content />
+    </RichTextEditor>
+  );
+}
+```

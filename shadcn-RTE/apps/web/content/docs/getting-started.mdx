@@ -1,0 +1,92 @@
+---
+title: Getting Started
+description: Get started with shadcn-RTE in your project.
+---
+
+# Getting Started
+
+## Prerequisites
+
+- React 18 or 19
+- A shadcn/ui setup with Tailwind CSS v4
+- Tiptap v2
+
+## Installation
+
+Install the editor and its peer dependencies:
+
+```bash
+npm install @shadcn-rte/editor @tiptap/react @tiptap/pm @tiptap/starter-kit @tiptap/extension-link
+```
+
+## Add the CSS
+
+Import the editor stylesheet in your global CSS file:
+
+```css
+@import "@shadcn-rte/editor/style.css";
+```
+
+This adds all the necessary typography and component styles using your shadcn CSS variables.
+
+## Create an Editor
+
+```tsx
+"use client";
+
+import { useEditor } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import Underline from '@tiptap/extension-underline';
+import { RichTextEditor, Link } from '@shadcn-rte/editor';
+
+export function MyEditor() {
+  const editor = useEditor({
+    extensions: [
+      StarterKit,
+      Link,
+      Underline,
+    ],
+    content: '<p>Start typing...</p>',
+  });
+
+  return (
+    <RichTextEditor editor={editor}>
+      <RichTextEditor.Toolbar sticky>
+        <RichTextEditor.ControlsGroup>
+          <RichTextEditor.Bold />
+          <RichTextEditor.Italic />
+          <RichTextEditor.Underline />
+          <RichTextEditor.Strikethrough />
+          <RichTextEditor.Code />
+          <RichTextEditor.ClearFormatting />
+        </RichTextEditor.ControlsGroup>
+
+        <RichTextEditor.ControlsGroup>
+          <RichTextEditor.H1 />
+          <RichTextEditor.H2 />
+          <RichTextEditor.H3 />
+        </RichTextEditor.ControlsGroup>
+
+        <RichTextEditor.ControlsGroup>
+          <RichTextEditor.BulletList />
+          <RichTextEditor.OrderedList />
+          <RichTextEditor.Blockquote />
+          <RichTextEditor.Hr />
+        </RichTextEditor.ControlsGroup>
+
+        <RichTextEditor.ControlsGroup>
+          <RichTextEditor.Link />
+          <RichTextEditor.Unlink />
+        </RichTextEditor.ControlsGroup>
+
+        <RichTextEditor.ControlsGroup>
+          <RichTextEditor.Undo />
+          <RichTextEditor.Redo />
+        </RichTextEditor.ControlsGroup>
+      </RichTextEditor.Toolbar>
+
+      <RichTextEditor.Content />
+    </RichTextEditor>
+  );
+}
+```

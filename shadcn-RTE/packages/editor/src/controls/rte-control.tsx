@@ -20,13 +20,15 @@ export function RichTextEditorControl({
   className,
   children,
   onMouseDown,
+  onClick,
+  disabled,
   ...props
 }: RichTextEditorControlProps) {
   return (
     <Toggle
       size="sm"
       pressed={active}
-      disabled={props.disabled}
+      disabled={disabled}
       aria-label={props["aria-label"]}
       title={props.title}
       className={cn("h-8 w-8 p-0", className)}
@@ -34,7 +36,7 @@ export function RichTextEditorControl({
         e.preventDefault();
         onMouseDown?.(e);
       }}
-      onPressedChange={() => props.onClick?.({} as React.MouseEvent<HTMLButtonElement>)}
+      onPressedChange={() => onClick?.({} as React.MouseEvent<HTMLButtonElement>)}
     >
       {children}
     </Toggle>
