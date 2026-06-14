@@ -28,14 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+      >
         <RootProvider theme={{ enabled: false }}>
-          <Providers>
-            <div className="grid grid-rows-[auto_1fr] h-svh">
-              <Header />
-              {children}
-            </div>
-          </Providers>
+          <Providers>{children}</Providers>
         </RootProvider>
       </body>
     </html>
